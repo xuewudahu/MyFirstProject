@@ -1,4 +1,4 @@
-package com.example.myproject
+package com.example.cameraalbumtest
 
 import org.junit.Test
 
