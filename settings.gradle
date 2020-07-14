@@ -1,3 +1,7 @@
+include ':notification'
+include ':contentprovider'
+include ':myapplication'
+include ':broadcasttest'
 include ':androidthreadtest'
 include ':uilayouttest'
 include ':uibestpractice'

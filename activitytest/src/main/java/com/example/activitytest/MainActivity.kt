@@ -4,15 +4,24 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (savedInstanceState != null) {
+            val tempData = savedInstanceState.getString("data_key")
+            if (tempData != null) {
+                Log.d("WEWE", tempData)
+            }
+        }
         button1.setOnClickListener{
             Toast.makeText(this,"you are laoguai",Toast.LENGTH_SHORT).show()
         }
@@ -28,6 +37,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data= Uri.parse("https://www.baidu.com")
             startActivity(intent)
+        }
+        imageView.setOnClickListener{
+            imageView.setImageResource(R.drawable.w)
         }
     }
 
@@ -46,4 +58,45 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
+
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.d("tag","onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("tag","onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("tag","onPause")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("tag","onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("tag","onRestart")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("tag","onStop")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        val tempData="Something u just typed"
+        outState?.putString("data_key",tempData)
+    }
+
+
 }

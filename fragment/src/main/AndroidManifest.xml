@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ThirdActivity"></activity>
-        <activity android:name=".SecondActivity">
+        <activity android:name=".LeftFragment">
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" />
 

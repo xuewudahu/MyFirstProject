@@ -7,43 +7,33 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.left_fragment.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button1.setOnClickListener{
-            Toast.makeText(this,"you are laoguai",Toast.LENGTH_SHORT).show()
+
+        button.setOnClickListener{
+            replaceFragment(Another())
+
+
         }
-        button2.setOnClickListener{
-            val intent=Intent(this,SecondActivity::class.java)
-            startActivity(intent)
-        }
-        button3.setOnClickListener{
-            val intent=Intent("com.example.activitytest.ACTION_START")
-            startActivity(intent)
-        }
-        button4.setOnClickListener{
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data= Uri.parse("https://www.baidu.com")
-            startActivity(intent)
-        }
+        replaceFragment(RightFragment())
     }
 
-
-
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main,menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.add_item -> Toast.makeText(this,"dsfa",Toast.LENGTH_SHORT).show()
-            R.id.remove_item -> Toast.makeText(this,"dfs dsfa",Toast.LENGTH_SHORT).show()
-        }
-        return true
+    fun replaceFragment(fragment: Fragment){
+        //第二步，获取FragmentManager
+        val fragmentManager = supportFragmentManager
+        //第三步，开启一个事务
+        val transaction = fragmentManager.beginTransaction()
+        //第四步，向容器内添加或者替换Fragment，一般使用replace来代替，传递id和添加的Fragment实例
+        transaction.replace(R.id.frame_layout,fragment)
+        //第五步，提交事务
+        transaction.addToBackStack(null)
+        Toast.makeText(this,"you are laoguai",Toast.LENGTH_SHORT).show()
+        transaction.commit()
     }
 }
