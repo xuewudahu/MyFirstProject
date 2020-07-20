@@ -1,3 +1,7 @@
+include ':drawerlayout'
+include ':webviewtest'
+include ':uidesign'
+include ':webview'
 include ':notification'
 include ':contentprovider'
 include ':myapplication'

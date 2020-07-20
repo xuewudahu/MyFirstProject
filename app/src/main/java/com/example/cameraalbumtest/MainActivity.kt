@@ -1,19 +1,21 @@
 package com.example.cameraalbumtest
 
 import android.app.Activity
-import android.net.Uri
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.core.content.FileProvider
-import kotlinx.android.synthetic.main.activity_main.*
-import java.io.File
-import android.provider.MediaStore
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.media.ExifInterface
+import android.net.Uri
+import android.os.Build
+import android.os.Bundle
+import android.provider.MediaStore
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
+import kotlinx.android.synthetic.main.activity_main.*
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
     val takePhoto =1
@@ -43,11 +45,14 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent,takePhoto)
         }
         fromAlbumBtn.setOnClickListener {
+
             val intent =Intent(Intent.ACTION_CREATE_DOCUMENT)
             intent.addCategory(Intent.CATEGORY_OPENABLE)
             intent.type="image/*"
             startActivityForResult(intent,fromAlbum)
+
         }
+
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

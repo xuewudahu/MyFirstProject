@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/broadcasttest" />
             <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/databasetest" />
+            <option value="$PROJECT_DIR$/drawerlayout" />
             <option value="$PROJECT_DIR$/filePersistencetest" />
             <option value="$PROJECT_DIR$/fragment" />
             <option value="$PROJECT_DIR$/fragmentBestpractice" />
@@ -26,7 +27,10 @@
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/uibestpractice" />
+            <option value="$PROJECT_DIR$/uidesign" />
             <option value="$PROJECT_DIR$/uilayouttest" />
+            <option value="$PROJECT_DIR$/webview" />
+            <option value="$PROJECT_DIR$/webviewtest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
