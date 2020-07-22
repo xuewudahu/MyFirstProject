@@ -14,7 +14,7 @@ class SunnyWeatherApplication : Application() {
         lateinit var context: Context
     }
 
-    override fun onCreate() {
+     override fun onCreate() {
         super.onCreate()
         context = applicationContext
     }

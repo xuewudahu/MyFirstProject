@@ -1,3 +1,5 @@
+include ':leijiaqi'
+include ':sunnyweather'
 include ':drawerlayout'
 include ':webviewtest'
 include ':uidesign'
