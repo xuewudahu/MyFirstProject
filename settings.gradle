@@ -1,3 +1,6 @@
+include ':jetpacktest'
+include ':recyclerviewtest'
+include ':activitylifecycletest'
 include ':leijiaqi'
 include ':sunnyweather'
 include ':drawerlayout'
