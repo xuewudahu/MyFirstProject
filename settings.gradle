@@ -1,3 +1,8 @@
+include ':runtimepermissiontest'
+include ':broadcastbestpractice2'
+include ':broadcastbestpractice'
+include ':FilePersistenceTest'
+include ':sharedpreferencestest'
 include ':jetpacktest'
 include ':recyclerviewtest'
 include ':activitylifecycletest'

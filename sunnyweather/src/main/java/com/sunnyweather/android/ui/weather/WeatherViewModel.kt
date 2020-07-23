@@ -1,6 +1,8 @@
 package com.sunnyweather.android.ui.weather
 
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.lifecycle.*
+import androidx.room.RoomOpenHelper
 import com.sunnyweather.android.logic.Repository
 import com.sunnyweather.android.logic.model.Location
 
