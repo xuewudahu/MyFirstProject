@@ -4,22 +4,16 @@
     android:layout_height="match_parent">
 
 
-    <Button
-        android:id="@+id/play"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Play" />
+        android:layout_height="200dp">
 
-    <Button
-        android:id="@+id/pause"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pause" />
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
-    <Button
-        android:id="@+id/stop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stop" />
+    </RelativeLayout>
 
 </LinearLayout>

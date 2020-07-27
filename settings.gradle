@@ -1,3 +1,6 @@
+include ':playvideotest'
+include ':playaudiotest'
+include ':cameraalbumtest'
 include ':runtimepermissiontest'
 include ':broadcastbestpractice2'
 include ':broadcastbestpractice'

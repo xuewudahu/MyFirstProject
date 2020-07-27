@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/broadcastbestpractice" />
             <option value="$PROJECT_DIR$/broadcastbestpractice2" />
             <option value="$PROJECT_DIR$/broadcasttest" />
+            <option value="$PROJECT_DIR$/cameraalbumtest" />
             <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/databasetest" />
             <option value="$PROJECT_DIR$/drawerlayout" />
@@ -31,6 +32,8 @@
             <option value="$PROJECT_DIR$/mediaplayer" />
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/notification" />
+            <option value="$PROJECT_DIR$/playaudiotest" />
+            <option value="$PROJECT_DIR$/playvideotest" />
             <option value="$PROJECT_DIR$/recyclerviewtest" />
             <option value="$PROJECT_DIR$/runtimepermissiontest" />
             <option value="$PROJECT_DIR$/sharedpreferencestest" />
