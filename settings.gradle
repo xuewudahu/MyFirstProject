@@ -1,3 +1,4 @@
+include ':servicetest'
 include ':playvideotest'
 include ':playaudiotest'
 include ':cameraalbumtest'
