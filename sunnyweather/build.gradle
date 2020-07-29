@@ -26,11 +26,20 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs{
+        config{
+            storeFile file('/Users/guolin/guolin.jks')
+            storePassword '1234567'
+            keyAlias='guolindev'
+            keyPassword '1234567'
+        }
+    }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }

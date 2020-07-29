@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sunnyweather.android.R
 import kotlinx.android.synthetic.main.activity_news_content.*
 
 class NewsContentActivity : AppCompatActivity() {
